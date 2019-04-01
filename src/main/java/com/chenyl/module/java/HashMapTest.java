@@ -31,7 +31,7 @@ public class HashMapTest {
 
         //HashMap重复put值时，是否会覆盖前面的value
         {
-            HashMap<Person,String> map1 = new HashMap();
+            HashMap<Person,String> map1 = new HashMap<>();
             Person person1 = new Person("chenyl",18);
             Person person2 = new Person("guolin",20);
 
