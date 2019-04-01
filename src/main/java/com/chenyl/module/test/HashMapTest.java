@@ -1,4 +1,4 @@
-package com.chenyl.module.java;
+package com.chenyl.module.test;
 
 import com.chenyl.module.model.Person;
 

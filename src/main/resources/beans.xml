@@ -11,5 +11,4 @@
         <property name="name" value="chenyl"/>
         <property name="age" value="18"/>
     </bean>
-
 </beans>
