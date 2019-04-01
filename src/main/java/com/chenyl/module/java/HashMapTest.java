@@ -11,7 +11,7 @@ public class HashMapTest {
 
         //HashMap存取
         {
-            Map<String,String> map = new HashMap<>();
+            HashMap<String,String> map = new HashMap<>();
 
             map.put("name","chenyl");
             map.put("sex","男");
@@ -30,7 +30,7 @@ public class HashMapTest {
 
         //HashMap重复put值时，是否会覆盖前面的value
         {
-            Map<Person,String> map1 = new HashMap();
+            HashMap<Person,String> map1 = new HashMap();
             Person person1 = new Person("chenyl",18);
             Person person2 = new Person("guolin",20);
 
@@ -50,7 +50,10 @@ public class HashMapTest {
 
         //Map的遍历
         {
-            Map<String,String> map = new HashMap<>();
+            HashMap<String,String> map = new HashMap<>();
+            map.put("1","chenyl");
+            map.put("2","guolin");
+
             //1、for循环遍历key
             System.out.println("通过Map.keySet遍历key和value：");
             for (String key: map.keySet()){
