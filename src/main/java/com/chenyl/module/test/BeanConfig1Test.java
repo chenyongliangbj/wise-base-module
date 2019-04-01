@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *      1）使用xml
  *      2）使用config
  */
-public class BeanTest {
+public class BeanConfig1Test {
     public static void main(String[] args){
 
         //使用xml方式
