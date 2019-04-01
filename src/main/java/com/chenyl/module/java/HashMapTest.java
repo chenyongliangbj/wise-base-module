@@ -5,6 +5,7 @@ import com.chenyl.module.model.Person;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class HashMapTest {
     public static void main(String[] args){
@@ -56,7 +57,8 @@ public class HashMapTest {
 
             //1、for循环遍历key
             System.out.println("通过Map.keySet遍历key和value：");
-            for (String key: map.keySet()){
+            Set<String> keys = map.keySet();
+            for (String key: keys){
                 System.out.println("key:"+key+" value:"+map.get(key));
             }
             //2、for循环遍历value
@@ -75,9 +77,13 @@ public class HashMapTest {
             System.out.println("通过Map.entrySet使用iterator遍历key和va");
             Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
             while(iterator.hasNext()){
-                Map.Entry<String,String> entry = iterator.next();
+                HashMap.Entry<String,String> entry = iterator.next();
                 System.out.println("key:"+entry.getKey()+" value:"+entry.getValue());
             }
+
+            //总结：
+            // 1、抽象类可以不用实现接口的全部方法
+            // 2、增强for循环根本还是iterator()
         }
     }
 }
