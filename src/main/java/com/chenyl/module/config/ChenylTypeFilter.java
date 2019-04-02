@@ -1,6 +1,5 @@
 package com.chenyl.module.config;
 
-import org.springframework.core.io.Resource;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.core.type.ClassMetadata;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -9,6 +8,9 @@ import org.springframework.core.type.filter.TypeFilter;
 
 import java.io.IOException;
 
+/**
+ * 自定义过滤器
+ */
 public class ChenylTypeFilter implements TypeFilter {
 
     private ClassMetadata classMetadata;
