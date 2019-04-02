@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
 /**
- * 测试单实例、多实例
+ * 测试懒加载
  */
 @Configuration
 public class BeanConfig4 {
