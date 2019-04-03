@@ -31,4 +31,13 @@ public class BeanConfig2 {
     /**
      * 如果includeFilters，useDefaultFilters = true时，会把@Controller、@Service、@Respostry、@Component都扫描进来。
      */
+
+
+    /**
+     * @ComponentScan只能扫描到4类：
+     * 1.@Component
+     * 2.@Controller
+     * 3.@Service
+     * 4.@Repository
+     */
 }

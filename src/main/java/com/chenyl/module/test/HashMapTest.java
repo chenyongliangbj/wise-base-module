@@ -17,12 +17,15 @@ public class HashMapTest {
             map.put("name","chenyl");
             map.put("sex","男");
             map.put(null,"ddd");
+            map.put(null,"eee");
             map.put("test",null);
+            map.put("test11",null);
 
             System.out.println(map.get("name"));
             System.out.println(map.get("sex"));
             System.out.println(map.get(null));
             System.out.println(map.get("test"));
+            System.out.println(map.get("test11"));
 
             //结论：
             // 1、HashMap存储结构为key-value，存储的是键值
