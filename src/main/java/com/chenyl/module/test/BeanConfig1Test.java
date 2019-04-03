@@ -12,13 +12,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *  1、bean容器学习
  *      1）使用xml
  *      2）使用config
+ *
+ *  2、测试xml装配bean
+ *  3、测试config装配bean
+ *
+ *  4、测试@Configuration+@Bean
  */
 public class BeanConfig1Test {
     public static void main(String[] args){
 
         //使用xml方式
         {
-            ApplicationContext context =  new ClassPathXmlApplicationContext("beans.xml");
+            ApplicationContext context =  new ClassPathXmlApplicationContext("beans1.xml");
             Person person = (Person) context.getBean("person");
 //            Person person = (Person) context.getBean(Person.class);
             System.out.println("使用xml方式，获取person实例");

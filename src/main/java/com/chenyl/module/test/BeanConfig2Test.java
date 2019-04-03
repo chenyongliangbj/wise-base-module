@@ -5,6 +5,9 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * 测试@ComponentScan 扫描
+ */
 public class BeanConfig2Test {
 
     @Test

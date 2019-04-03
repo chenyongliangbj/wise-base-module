@@ -22,6 +22,7 @@ public class BeanConfig3 {
     @Scope("prototype")
     @Bean("person")
     public Person person(){
+        System.out.println("给容器中添加person..........");
         return new Person("chenyl",20);
     }
 

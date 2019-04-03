@@ -27,4 +27,8 @@ public class BeanConfig2 {
      *
      * includeFIlters = Filter[]根据规则只包含哪些组件（ps：useDefaultFilters设置为false）
      */
+
+    /**
+     * 如果includeFilters，useDefaultFilters = true时，会把@Controller、@Service、@Respostry、@Component都扫描进来。
+     */
 }
