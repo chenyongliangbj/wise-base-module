@@ -1,4 +1,4 @@
-package com.chenyl.module.service;
+package com.chenyl.module.spring.service;
 
 import org.springframework.stereotype.Service;
 

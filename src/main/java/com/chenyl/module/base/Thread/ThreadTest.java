@@ -1,4 +1,4 @@
-package com.chenyl.module.test;
+package com.chenyl.module.base.Thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

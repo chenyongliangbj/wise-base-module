@@ -1,4 +1,4 @@
-package com.chenyl.module.controller;
+package com.chenyl.module.spring.controller;
 
 import org.springframework.stereotype.Controller;
 

@@ -1,6 +1,6 @@
-package com.chenyl.module.test;
+package com.chenyl.module.base.hashMap;
 
-import com.chenyl.module.model.Person;
+import com.chenyl.module.spring.model.Person;
 
 import java.util.HashMap;
 import java.util.Iterator;

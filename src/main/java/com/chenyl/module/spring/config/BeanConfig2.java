@@ -1,4 +1,4 @@
-package com.chenyl.module.config;
+package com.chenyl.module.spring.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

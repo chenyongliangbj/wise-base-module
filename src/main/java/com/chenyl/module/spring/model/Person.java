@@ -1,23 +1,17 @@
-package com.chenyl.module.model;
-
-import org.springframework.stereotype.Component;
+package com.chenyl.module.spring.model;
 
 import java.util.Objects;
 
-/**
- * 测试自动配置bean，@Component
- */
-@Component
-public class PersonScan {
+public class Person {
     private String name;
     private Integer age;
 
-    public PersonScan(String name, Integer age) {
+    public Person(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
 
-    public PersonScan() {
+    public Person() {
 
     }
 
@@ -37,12 +31,19 @@ public class PersonScan {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PersonScan person = (PersonScan) o;
+        Person person = (Person) o;
         return Objects.equals(name, person.name) &&
                 Objects.equals(age, person.age);
     }
@@ -50,13 +51,5 @@ public class PersonScan {
     @Override
     public int hashCode() {
         return Objects.hash(name, age);
-    }
-
-    @Override
-    public String toString() {
-        return "PersonScan{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
     }
 }

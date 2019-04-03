@@ -1,4 +1,4 @@
-package com.chenyl.module.config;
+package com.chenyl.module.spring.config;
 
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.core.type.ClassMetadata;

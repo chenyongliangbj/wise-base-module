@@ -1,6 +1,6 @@
-package com.chenyl.module.test;
+package com.chenyl.module.spring.test;
 
-import com.chenyl.module.config.BeanConfig3;
+import com.chenyl.module.spring.config.BeanConfig3;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

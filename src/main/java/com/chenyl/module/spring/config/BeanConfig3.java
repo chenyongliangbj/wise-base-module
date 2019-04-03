@@ -1,6 +1,6 @@
-package com.chenyl.module.config;
+package com.chenyl.module.spring.config;
 
-import com.chenyl.module.model.Person;
+import com.chenyl.module.spring.model.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

@@ -1,7 +1,7 @@
-package com.chenyl.module.test;
+package com.chenyl.module.spring.test;
 
-import com.chenyl.module.config.BeanConfig1;
-import com.chenyl.module.model.Person;
+import com.chenyl.module.spring.config.BeanConfig1;
+import com.chenyl.module.spring.model.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
