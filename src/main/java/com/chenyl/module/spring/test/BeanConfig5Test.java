@@ -10,6 +10,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 1、@ComponentScan注解启动了组件扫描
  * 2、通过XML启动组件扫描
  */
+
+/**
+ * 其中@ComponentScan只能扫描到4类：
+ * 1.@Component
+ * 2.@Controller
+ * 3.@Service
+ * 4.@Repository
+ */
 public class BeanConfig5Test {
     public static void main(String[] args){
 
