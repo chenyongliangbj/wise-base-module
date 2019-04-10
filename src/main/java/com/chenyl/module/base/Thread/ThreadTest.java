@@ -4,6 +4,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
+/**
+ * 线程三种启动方式
+ * 1. 继承类Thread
+ * 2. 实现接口Runnable
+ * 3. 实现接口Callable
+ */
 public class ThreadTest {
 
     private static class UseThread extends Thread{

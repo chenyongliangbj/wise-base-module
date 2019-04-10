@@ -11,4 +11,6 @@
         <property name="name" value="chenyl"/>
         <property name="age" value="18"/>
     </bean>
+
+    <bean id="dog" class="com.chenyl.module.spring.model.Dog" init-method="init" destroy-method="destroy"></bean>
 </beans>
