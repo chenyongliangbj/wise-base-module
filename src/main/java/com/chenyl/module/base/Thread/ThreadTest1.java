@@ -10,7 +10,7 @@ import java.util.concurrent.FutureTask;
  * 2. 实现接口Runnable
  * 3. 实现接口Callable
  */
-public class ThreadTest {
+public class ThreadTest1 {
 
     private static class UseThread extends Thread{
         @Override
