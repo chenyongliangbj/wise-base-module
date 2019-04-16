@@ -40,6 +40,7 @@ public class ThreadTest1 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         UseThread useThread = new UseThread();
         useThread.start();
+        useThread.getPriority();
 
         UseRunnable useRunnable = new UseRunnable();
         new Thread(useRunnable).start();

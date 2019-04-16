@@ -7,6 +7,18 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * 测试@ComponentScan 扫描
+ *
+ * 其中：@ComponentScan只能扫描到4类：
+ *       * 1.@Component
+ *       * 2.@Controller
+ *       * 3.@Service
+ *       * 4.@Repository
+ *
+ * 注解@ComponentScan的参数：
+ *      * FilterType
+ *      * excludeFilters
+ *      * includeFilters
+ *      * 使用自定义TypeFilter
  */
 public class BeanConfig2Test {
 
