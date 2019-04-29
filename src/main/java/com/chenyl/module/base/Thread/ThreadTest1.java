@@ -1,5 +1,8 @@
 package com.chenyl.module.base.Thread;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadInfo;
+import java.lang.management.ThreadMXBean;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -62,5 +65,19 @@ public class ThreadTest1 {
         FutureTask<String> futureTask = new FutureTask<>(useCallable);
         new Thread(futureTask).start();
         System.out.println("Get UseCallable result:"+futureTask.get());
+
+
+
+
+
+        //Java虚拟机线程系统的管理接口
+        ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
+        //不需要获取同步的Moniter和synchronizer信息
+        ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false,false);
+        //遍历线程信息，仅打印线程ID和线程名称信息
+
+        for (ThreadInfo threadInfo : threadInfos) {
+            System.out.println(threadInfo.getThreadId()+"]"+threadInfo.getThreadName());
+        }
     }
 }
