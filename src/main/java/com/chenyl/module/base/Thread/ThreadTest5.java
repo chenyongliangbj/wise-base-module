@@ -1,29 +1,41 @@
 package com.chenyl.module.base.Thread;
 
-import java.util.concurrent.ExecutionException;
-
 /**
  * wait/notify实现生产者和消费者程序
+ *
+ * 采用多线程技术，射击实现一个符合生产者和消费者问题的程序，对某一个对象（枪膛）进行操作，其最大容量是20颗子弹，
+ * 生产者线程是一个压入线程，它不断向枪膛压入子弹，消费者线程是一个射出线程，它不断从枪膛中射出子弹
  */
 public class ThreadTest5 {
 
 
-
-    private static class Gun{
-
-
-        private int bullet;
+    private static Gun gun = new Gun(0,20);
 
 
+    private static class CheckNum extends  Thread{
+        @Override
+        public void run(){
+            gun.Shoot();
+        }
 
+    }
+    private static class PressIn extends  Thread{
+        @Override
+        public void run(){
+            gun.PressIn();
+        }
 
     }
 
+    public static void main(String[] args) throws InterruptedException {
 
+        for (int i = 0; i < 50 ; i++) {
+            new PressIn().start();
+        }
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        {
-
+        for (int i = 0; i < 50; i++) {
+            new CheckNum().start();
         }
     }
+
 }

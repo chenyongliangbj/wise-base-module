@@ -43,15 +43,46 @@ public class ThreadTest2 {
         }
     }
 
+    /**
+     * 实现接口Runnable
+     */
+    private static class UseRunnable implements Runnable{
+
+        @Override
+        public void run() {
+            try{
+                int a =2;
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                System.out.println("finally");
+            }
+            while(true){
+                System.out.println(Thread.currentThread().getName()+" implements Runnable");
+            }
+
+        }
+    }
+
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        UseThread useThread = new UseThread();
+        /*UseThread useThread = new UseThread();
         useThread.start();
 
         Thread.sleep(4000);
         useThread.interrupt();
-        //useThread.stop(); //不建议使用
+        //useThread.stop(); //不建议使用*/
 
 
+        //守护线程
+        UseRunnable useRunnable = new UseRunnable();
+        Thread thread = new Thread(useRunnable);
+        thread.setDaemon(true);
+
+        thread.start();
+
+        Thread.sleep(1000);
 
     }
 }
