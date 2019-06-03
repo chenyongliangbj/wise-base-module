@@ -1,4 +1,4 @@
-package com.chenyl.module.base.Thread;
+package com.chenyl.module.base.Thread.base;
 
 public class Gun {
 

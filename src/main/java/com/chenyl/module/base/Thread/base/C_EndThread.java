@@ -1,4 +1,4 @@
-package com.chenyl.module.base.Thread;
+package com.chenyl.module.base.Thread.base;
 
 import java.util.concurrent.ExecutionException;
 
@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
  * isInterrupted()      => isInterrupted() == true
  * Thread.interrupted() => isInterrupted() == false
  */
-public class ThreadTest2 {
+public class C_EndThread {
 
     /**
       * 继承类Thread
@@ -27,7 +27,6 @@ public class ThreadTest2 {
     private static class UseThread extends Thread{
         @Override
         public void run(){
-            super.run();
             while(true){
                 System.out.println(Thread.currentThread().getName()+" am extends Thread isInterrupted："+isInterrupted());
 
@@ -50,39 +49,35 @@ public class ThreadTest2 {
 
         @Override
         public void run() {
-            try{
-                int a =2;
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } finally {
-                System.out.println("finally");
-            }
             while(true){
-                System.out.println(Thread.currentThread().getName()+" implements Runnable");
-            }
+                System.out.println(Thread.currentThread().getName()+" am extends Thread isInterrupted："+Thread.currentThread().isInterrupted());
 
+                if(Thread.currentThread().isInterrupted()){
+                    System.out.println(Thread.currentThread().getName()+" isInterrupted："+Thread.currentThread().isInterrupted());
+                    break;
+                }
+               /* if(Thread.interrupted()){
+                    System.out.println(Thread.currentThread().getName()+" isInterrupted："+Thread.currentThread().isInterrupted());
+                    break;
+                }*/
+            }
         }
     }
 
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        /*UseThread useThread = new UseThread();
+        UseThread useThread = new UseThread();
         useThread.start();
 
         Thread.sleep(4000);
         useThread.interrupt();
-        //useThread.stop(); //不建议使用*/
+        //useThread.stop(); //不建议使用
 
 
-        //守护线程
         UseRunnable useRunnable = new UseRunnable();
         Thread thread = new Thread(useRunnable);
-        thread.setDaemon(true);
-
         thread.start();
-
-        Thread.sleep(1000);
-
+        Thread.sleep(4000);
+        thread.interrupt();
     }
 }
