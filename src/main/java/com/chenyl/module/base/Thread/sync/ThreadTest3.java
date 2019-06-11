@@ -1,4 +1,4 @@
-package com.chenyl.module.base.Thread;
+package com.chenyl.module.base.Thread.sync;
 
 import java.util.concurrent.ExecutionException;
 

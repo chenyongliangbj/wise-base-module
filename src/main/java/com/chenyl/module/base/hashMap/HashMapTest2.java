@@ -1,6 +1,5 @@
 package com.chenyl.module.base.hashMap;
 
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class HashMapTest2 {
