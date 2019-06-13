@@ -106,7 +106,10 @@ public class G_Interrupt2SleepWaitJoin {
         }
 
         {//测试interrupt对wait的影响
+            F_WNThread.UseThread useThread = new F_WNThread.UseThread();
+            useThread.start();
 
+            useThread.interrupt();
         }
     }
 }

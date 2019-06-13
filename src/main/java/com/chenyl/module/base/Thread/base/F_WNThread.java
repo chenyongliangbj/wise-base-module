@@ -24,7 +24,7 @@ public class F_WNThread {
 
     private static Object ob = new Object();//锁
 
-    private static class UseThread extends  Thread{
+    public static class UseThread extends  Thread{
 
         @Override
         public void run() {
@@ -37,6 +37,12 @@ public class F_WNThread {
                         ob.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
+                        Thread.currentThread().interrupt();
+                    }
+
+                    if(isInterrupted()){
+                        System.out.println("中断了……");
+                        break;
                     }
 
                     System.out.println("ccccccc"+num);
@@ -49,7 +55,7 @@ public class F_WNThread {
 
     }
 
-    private static class UseThread2 extends Thread{
+    public static class UseThread2 extends Thread{
         @Override
         public void run() {
             synchronized (ob){
