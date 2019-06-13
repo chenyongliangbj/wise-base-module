@@ -23,7 +23,7 @@ package com.chenyl.module.base.Thread.base;
  *   }
  *
  */
-public class F_WNTest {
+public class GunThreadTest {
 
 
     private static Gun gun = new Gun(0,20);
