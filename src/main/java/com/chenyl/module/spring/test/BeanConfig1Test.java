@@ -35,7 +35,7 @@ public class BeanConfig1Test {
         {
             ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig1.class);
 //            Person person = context.getBean(Person.class);
-            Person person = (Person) context.getBean("person1");
+            Person person = (Person) context.getBean("person");
             System.out.println("使用注解方式，获取person实例");
             System.out.println(person.toString());
         }
