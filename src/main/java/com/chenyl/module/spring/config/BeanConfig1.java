@@ -15,4 +15,13 @@ public class BeanConfig1 {
         return new Person("chenyl",20);
     }
 
+    @Bean("person1")
+    public Person person1(){
+        return new Person("malh",21);
+    }
+
+    @Bean("person2")
+    public Person person2(){
+        return new Person("guolin",30);
+    }
 }

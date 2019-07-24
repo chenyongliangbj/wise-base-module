@@ -28,6 +28,14 @@ public class BeanConfig1Test {
 //            Person person = (Person) context.getBean(Person.class);
             System.out.println("使用xml方式，获取person实例");
             System.out.println(person.toString());
+
+
+            //获取Person的所有实例
+            String[] names = context.getBeanNamesForType(Person.class);
+            System.out.println("Person的所有实例：");
+            for (int i = 0; i < names.length; i++) {
+                System.out.println(names[i]+":"+context.getBean(names[i]).toString());
+            }
         }
 
 
@@ -38,6 +46,13 @@ public class BeanConfig1Test {
             Person person = (Person) context.getBean("person");
             System.out.println("使用注解方式，获取person实例");
             System.out.println(person.toString());
+
+            //获取Person的所有实例
+            String[] names = context.getBeanNamesForType(Person.class);
+            System.out.println("Person的所有实例：");
+            for (int i = 0; i < names.length; i++) {
+                System.out.println(names[i]+":"+context.getBean(names[i]).toString());
+            }
         }
     }
 
