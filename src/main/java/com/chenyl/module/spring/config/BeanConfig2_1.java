@@ -5,13 +5,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 /**
- * 测试注解：自定义扫描包含。。。
+ * 扫描ComponentScan
  */
 @Configuration
-@ComponentScan(value = "com.chenyl.module.spring",includeFilters =  {
-        @ComponentScan.Filter(type = FilterType.CUSTOM,classes = {ChenylTypeFilter.class})
-},useDefaultFilters = false)
-public class BeanConfig2 {
+@ComponentScan(value = "com.chenyl.module.spring.service")
+public class BeanConfig2_1 {
 
     /**
      * FilterType类型
