@@ -11,6 +11,16 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class BeanConfig3 {
 
+    /**
+     * spring 默认bean为单例模式
+     *
+     * 单例bean的优势：
+     *      1、减少新生成实例的消耗
+     *      2、减少JVM垃圾回收
+     *      3、缓存快速获取bean
+     * 单例bean的劣势： 线程不安全
+     **/
+
     //给容器注册一个bean，类型为返回值的类型，默认为单实例
 
     /**
