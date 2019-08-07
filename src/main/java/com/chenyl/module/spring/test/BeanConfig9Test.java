@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 测试bean的生命周期  创建 --》 初始化 --》 销毁
+ * 测试bean的生命周期 1: 创建 --》 初始化 --》 销毁
  *
  */
 public class BeanConfig9Test {
