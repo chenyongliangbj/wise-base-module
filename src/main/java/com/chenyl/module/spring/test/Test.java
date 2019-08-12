@@ -11,7 +11,9 @@ import org.springframework.beans.factory.support.SimpleBeanDefinitionRegistry;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.AbstractRefreshableApplicationContext;
 import org.springframework.web.SpringServletContainerInitializer;
+import org.springframework.web.context.ConfigurableWebApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
 public class Test {
@@ -40,8 +42,11 @@ public class Test {
 
         XmlWebApplicationContext a;
 
-        AnnotationConfigApplicationContext annotationConfigApplicationContext;
+        AnnotationConfigApplicationContext anotationConfigApplicationContext;
 
+        AbstractRefreshableApplicationContext abstractRefreshableApplicationContext;
+
+        ConfigurableWebApplicationContext applicationContext1;
     }
 }
 

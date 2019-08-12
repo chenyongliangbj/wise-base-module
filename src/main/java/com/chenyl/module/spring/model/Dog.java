@@ -1,5 +1,8 @@
 package com.chenyl.module.spring.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dog {
 
     public Dog(){
