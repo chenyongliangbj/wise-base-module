@@ -1,6 +1,7 @@
 package com.chenyl.module.spring.test;
 
 import com.chenyl.module.spring.config.BeanConfig10;
+import com.chenyl.module.spring.model.PersonScan;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -18,6 +19,10 @@ public class BeanConfig10Test {
             AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig10.class);
 
             System.out.println("IOC容器创建完成............");
+
+            PersonScan personScan = context.getBean("personScan",PersonScan.class);
+
+            System.out.println(personScan);
 
             context.close();
         }

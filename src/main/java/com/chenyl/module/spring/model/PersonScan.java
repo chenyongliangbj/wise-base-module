@@ -18,7 +18,8 @@ public class PersonScan {
     }
 
     public PersonScan() {
-
+        this.name = "chenyl";
+        this.age = 20;
     }
 
     public String getName() {
