@@ -1,6 +1,6 @@
 package com.chenyl.module.spring.config;
 
-import com.chenyl.module.spring.model.Dog;
+import com.chenyl.module.spring.model1.Dog;
 import com.chenyl.module.spring.model.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

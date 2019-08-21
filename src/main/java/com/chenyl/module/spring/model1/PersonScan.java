@@ -1,5 +1,6 @@
-package com.chenyl.module.spring.model;
+package com.chenyl.module.spring.model1;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
@@ -9,6 +10,10 @@ import java.util.Objects;
  */
 @Component
 public class PersonScan {
+
+    @Autowired
+    private Dog dog;
+
     private String name;
     private Integer age;
 
@@ -20,6 +25,20 @@ public class PersonScan {
     public PersonScan() {
         this.name = "chenyl";
         this.age = 20;
+    }
+
+    public void init(){
+        System.out.println("PersonScan init..........");
+    }
+
+    public void destroy(){
+        System.out.println("PersonScan destroy..........");
+    }
+
+
+    public void liuDog(){
+
+        System.out.println(dog);
     }
 
     public String getName() {

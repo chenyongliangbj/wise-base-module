@@ -4,14 +4,12 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.SingletonBeanRegistry;
-import org.springframework.beans.factory.support.AbstractBeanFactory;
-import org.springframework.beans.factory.support.DefaultSingletonBeanRegistry;
-import org.springframework.beans.factory.support.FactoryBeanRegistrySupport;
-import org.springframework.beans.factory.support.SimpleBeanDefinitionRegistry;
+import org.springframework.beans.factory.support.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.AbstractRefreshableApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.context.ConfigurableWebApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
@@ -46,7 +44,24 @@ public class Test {
 
         AbstractRefreshableApplicationContext abstractRefreshableApplicationContext;
 
+        ConfigurableBeanFactory configurableBeanFactory1;
+
+        BeanDefinitionRegistry beanDefinitionRegistry;
+
+        BeanFactory beanFactory1;
+
+        SimpleBeanDefinitionRegistry simpleBeanDefinitionRegistry;
+
+        DefaultListableBeanFactory defaultListableBeanFactory;
+
+        GenericApplicationContext genericApplicationContext;
+
         ConfigurableWebApplicationContext applicationContext1;
+
+        ConfigurableListableBeanFactory configurableListableBeanFactory;
+
+        AbstractAutowireCapableBeanFactory abstractAutowireCapableBeanFactory;
+
     }
 }
 
