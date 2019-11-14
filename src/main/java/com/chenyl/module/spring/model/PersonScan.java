@@ -1,5 +1,6 @@
 package com.chenyl.module.spring.model;
 
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
@@ -8,6 +9,7 @@ import java.util.Objects;
  * 测试自动配置bean，@Component
  */
 @Component
+@DependsOn(value = "dog")
 public class PersonScan {
     private String name;
     private Integer age;
