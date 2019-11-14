@@ -1,7 +1,7 @@
 package com.chenyl.module.spring.test;
 
 import com.chenyl.module.spring.config.BeanConfig10;
-import com.chenyl.module.spring.model.PersonScan;
+import com.chenyl.module.spring.model1.PersonScan;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

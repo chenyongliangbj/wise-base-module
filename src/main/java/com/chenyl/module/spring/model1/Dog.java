@@ -1,4 +1,4 @@
-package com.chenyl.module.spring.model;
+package com.chenyl.module.spring.model1;
 
 import org.springframework.stereotype.Component;
 
