@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Lambda表达式语法：
+ * () -> {}()；
+ * (参数类型 参数名称) -> { 代码语句 }；
+ * //小括号里无参数则留空()，有一个参数括号可以省略，多个参数用逗号隔开
+ *
+ *
+ **/
 public class LambdaTest {
 
     public static void main(String[] args){
