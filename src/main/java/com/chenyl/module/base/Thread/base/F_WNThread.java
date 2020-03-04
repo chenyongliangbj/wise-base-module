@@ -22,7 +22,7 @@ public class F_WNThread {
 
     private static int num = 0;
 
-    private static Object ob = new Object();//锁
+    private static final Object ob = new Object();//锁
 
     public static class UseThread extends  Thread{
 
@@ -30,41 +30,23 @@ public class F_WNThread {
         public void run() {
 
             synchronized (ob){
-                while(num < 200){
 
-                    System.out.println("ddddddd");
                     try {
+                        System.out.println(Thread.currentThread().getName()+":线程正在等待运行");
                         ob.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                         Thread.currentThread().interrupt();
                     }
 
-                    if(isInterrupted()){
-                        System.out.println("中断了……");
-                        break;
-                    }
+                    System.out.println(Thread.currentThread().getName()+":线程结束了");
 
-                    System.out.println("ccccccc"+num);
-                }
-
-                System.out.println("eeeeeeeee"+num);
             }
 
         }
 
     }
 
-    public static class UseThread2 extends Thread{
-        @Override
-        public void run() {
-            synchronized (ob){
-                num = 200;
-                System.out.println("通知");
-                ob.notifyAll();
-            }
-        }
-    }
 
     public static void main(String[] args){
 
@@ -73,13 +55,20 @@ public class F_WNThread {
         UseThread useThread = new UseThread();
         useThread.start();
 
+        UseThread useThread2 = new UseThread();
+        useThread2.start();
+
+
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        UseThread2 useThread2 = new UseThread2();
-        useThread2.start();
+        synchronized (ob){
+            System.out.println("时间到了，通知ob对象的所有等待线程运行。。。");
+            ob.notifyAll();
+        }
     }
 }
