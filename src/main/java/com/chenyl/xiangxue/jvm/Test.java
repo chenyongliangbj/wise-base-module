@@ -30,7 +30,6 @@ public class Test {
         int a= 3;
         int b = 2;
         int c = (a+b)*10;
-
         System.out.println(c);
     }
 }

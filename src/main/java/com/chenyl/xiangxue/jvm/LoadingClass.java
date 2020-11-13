@@ -34,8 +34,10 @@ public class LoadingClass {
         // invokestatic
         staticInter();
     }
-
     private static void staticInter(){
         System.out.println("this is a staticInter");
     }
 }
+
+
+
